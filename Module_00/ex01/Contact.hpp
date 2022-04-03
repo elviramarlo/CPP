@@ -1,34 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   megaphone.cpp                                      :+:      :+:    :+:   */
+/*   Contact.hpp                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: elvmarti <elvmarti@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/03/21 22:13:02 by elvmarti          #+#    #+#             */
-/*   Updated: 2022/03/21 23:04:24 by elvmarti         ###   ########.fr       */
+/*   Created: 2022/03/22 18:06:50 by elvmarti          #+#    #+#             */
+/*   Updated: 2022/03/31 20:39:34 by elvmarti         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <iostream>
+#ifndef CONTACT_HPP
+# define CONTACT_HPP
 
-int	main(int argc, char **argv)
+# include <iostream>
+# include <iomanip>
+
+class Contact
 {
-	int		i;
-	int		x;
-	
-	i = 0;
-	if (argc > 1)
-	{
-		while (argv[++i])
-		{
-			x = 0;
-			while (argv[i][x])
-				std::cout << (char)toupper(argv[i][x++]);
-		}
-		std::cout << std::endl;
-	}
-	else
-		std::cout << "* LOUD AND UNBEARABLE FEEDBACK NOISE *" << std::endl;
-	return 0;
-}
+	private:
+		std::string first_name;
+		std::string last_name;
+		std::string nickname;
+		std::string phone;
+		std::string darkest_secret;
+	public:
+		void	create_contact();
+		void	show_contact();
+		void	show_all_data();
+};
+
+#endif

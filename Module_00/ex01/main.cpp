@@ -1,34 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   megaphone.cpp                                      :+:      :+:    :+:   */
+/*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: elvmarti <elvmarti@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/03/21 22:13:02 by elvmarti          #+#    #+#             */
-/*   Updated: 2022/03/21 23:04:24 by elvmarti         ###   ########.fr       */
+/*   Created: 2022/03/22 18:13:37 by elvmarti          #+#    #+#             */
+/*   Updated: 2022/03/31 20:54:07 by elvmarti         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <iostream>
+#include "Phonebook.hpp"
 
-int	main(int argc, char **argv)
+int	main(void)
 {
-	int		i;
-	int		x;
-	
-	i = 0;
-	if (argc > 1)
+	std::string	arg;
+	Phonebook	phone;
+
+	while (1)
 	{
-		while (argv[++i])
-		{
-			x = 0;
-			while (argv[i][x])
-				std::cout << (char)toupper(argv[i][x++]);
-		}
+		std::cout << std::endl << "Write ADD, SEARCH or EXIT: ";
+		std::getline(std::cin, arg);
 		std::cout << std::endl;
+		if (arg == "EXIT")
+			break;
+		else if (arg == "ADD")
+			phone.add_contact();
+		else if (arg == "SEARCH")
+			phone.search_contact();
 	}
-	else
-		std::cout << "* LOUD AND UNBEARABLE FEEDBACK NOISE *" << std::endl;
 	return 0;
 }

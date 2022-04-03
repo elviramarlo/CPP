@@ -5,25 +5,25 @@
 #                                                     +:+ +:+         +:+      #
 #    By: elvmarti <elvmarti@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
-#    Created: 2022/03/21 21:59:26 by elvmarti          #+#    #+#              #
-#    Updated: 2022/03/22 14:47:36 by elvmarti         ###   ########.fr        #
+#    Created: 2022/03/22 14:49:03 by elvmarti          #+#    #+#              #
+#    Updated: 2022/03/31 18:24:13 by elvmarti         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME = megaphone
+NAME = phonebook
 
 CC = clang++
 
 FLAGS = -Wall -Wextra -Werror -std=c++98
 
-SRCS = megaphone.cpp
+SRCS = main.cpp phonebook.cpp contact.cpp
 
 OBJS = $(SRCS:.cpp=.o)
 
 RM = rm -rf
 
 $(NAME): $(OBJS)
-		@echo $(GREEN) - Compiling - 
+		@echo $(GREEN) - Compiling - $(RESET)
 		$(CC) $(FLAGS) $(OBJS) -o $(NAME)
 
 all: $(NAME)
