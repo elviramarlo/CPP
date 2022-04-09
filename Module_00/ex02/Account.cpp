@@ -6,7 +6,7 @@
 /*   By: elvmarti <elvmarti@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/03 20:16:37 by elvmarti          #+#    #+#             */
-/*   Updated: 2022/04/09 19:42:41 by elvmarti         ###   ########.fr       */
+/*   Updated: 2022/04/09 20:35:21 by elvmarti         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -117,11 +117,12 @@ void	Account::displayStatus(void) const
 void	Account::_displayTimestamp(void)
 {
 	char	time_str[19];
-    time_t	now = time(NULL);
-    struct tm* tm_info = localtime(&now);
+    time_t	now;
+    struct tm* info;
 
-    strftime(buff, 19, "[%Y%m%d_%H%M%S]", tm_info);
+	time(&now);
+	info = localtime(&now);
+
+    strftime(time_str, 19, "[%Y%m%d_%H%M%S]", info);
     std::cout << time_str;
 }
-
-Account::Account() {}
