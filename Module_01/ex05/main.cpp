@@ -5,25 +5,24 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: elvmarti <elvmarti@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/04/10 17:44:48 by elvmarti          #+#    #+#             */
-/*   Updated: 2022/04/11 20:15:24 by elvmarti         ###   ########.fr       */
+/*   Created: 2022/04/19 12:54:51 by elvmarti          #+#    #+#             */
+/*   Updated: 2022/04/19 15:12:48 by elvmarti         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <iostream>
+#include "Karen.hpp"
 
-int	main()
+int	main(void)
 {
-	std::string string = "HI THIS BRAIN";
-	std::string* stringPTR = &string;
-	std::string& stringREF = string;
+	Karen karen;
 
-	std::cout << "ADDRESS:" << std::endl;
-	std::cout << "String:    " << &string << std::endl;
-	std::cout << "StringPTR: "<< stringPTR << std::endl;
-	std::cout << "StringREF: " << &stringREF << std::endl << std::endl;
-
-	std::cout << "STRING: " << std::endl;
-	std::cout << "StringPTR: "<< *stringPTR << std::endl;
-	std::cout << "StringREF: " << stringREF << std::endl << std::endl;
+	std::cout << std::endl << "DEBUG:" << std::endl;
+	karen.complain("debug");
+	std::cout << std::endl << "INFO:" << std::endl;
+	karen.complain("info");
+	std::cout << std::endl << "WARNING:" << std::endl;
+	karen.complain("warning");
+	std::cout << std::endl << "ERROR:" << std::endl;
+	karen.complain("error");
+	return 0;
 }
