@@ -6,7 +6,7 @@
 /*   By: elvmarti <elvmarti@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/19 16:41:14 by elvmarti          #+#    #+#             */
-/*   Updated: 2022/04/25 16:02:43 by elvmarti         ###   ########.fr       */
+/*   Updated: 2022/04/26 19:58:11 by elvmarti         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,20 +40,20 @@ class Fixed
 		bool	operator!=(const Fixed &other) const;
 
 		// Arithmetic operators:
-/* 		Fixed	operator+(const Fixed &fixed1, const Fixed &fixed2);
-		Fixed	operator-(const Fixed &fixed1, const Fixed &fixed2); */
+		Fixed	operator+(const Fixed &other) const;
+		Fixed	operator-(const Fixed &other) const;
 		Fixed	operator*(const Fixed &other) const;
 		Fixed	operator/(const Fixed &other) const;
 
 		Fixed	operator++(void);
 		Fixed	operator--(void);
-		Fixed	operator++(int);
-		Fixed	operator--(int);
+		Fixed	operator++(int num);
+		Fixed	operator--(int num);
 
-		static Fixed	&max(Fixed &a, Fixed &b);
-		static Fixed	&min(Fixed &a, Fixed &b);
-		static const Fixed	&max(Fixed const &a, Fixed const &b);
-		static const Fixed	&min(Fixed const &a, Fixed const &b);
+		static Fixed	&max(Fixed &fixed1, Fixed &fixed2);
+		static Fixed	&min(Fixed &fixed1, Fixed &fixed2);
+		static const Fixed	&max(Fixed const &fixed1, Fixed const &fixed2);
+		static const Fixed	&min(Fixed const &fixed1, Fixed const &fixed2);
 
 		int		getRawBits(void) const;
 		void	setRawBits (int const raw);
