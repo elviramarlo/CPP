@@ -6,7 +6,7 @@
 /*   By: elvmarti <elvmarti@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/27 15:15:58 by elvmarti          #+#    #+#             */
-/*   Updated: 2022/04/27 18:26:02 by elvmarti         ###   ########.fr       */
+/*   Updated: 2022/04/30 21:24:41 by elvmarti         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,12 +14,21 @@
 
 int	main(void)
 {
-	ScavTrap first("Jose");
-	ClapTrap second("María");
-
-	first.attack(second.getName());
-	first.takeDamage(8);
-	first.beRepaired(5);
-	first.guardGate();
-	//std::cout << first;
+	{
+		std::cout << "----- CLAP TRAP -----" << std::endl;
+		ClapTrap clap("María");
+		std::cout << clap;
+		clap.attack("Jose");
+		clap.beRepaired(2);
+	}
+	std::cout << std::endl;
+	{
+		std::cout << "----- SCAV TRAP -----" << std::endl;
+		ScavTrap scav("Pepe");
+		std::cout << scav;
+		scav.attack("Jose");
+		scav.beRepaired(2);
+		scav.takeDamage(4);
+		scav.guardGate();
+	}
 }
