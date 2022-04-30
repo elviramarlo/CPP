@@ -6,14 +6,13 @@
 /*   By: elvmarti <elvmarti@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/26 18:01:50 by elvmarti          #+#    #+#             */
-/*   Updated: 2022/04/26 19:58:45 by elvmarti         ###   ########.fr       */
+/*   Updated: 2022/04/27 13:44:19 by elvmarti         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Fixed.hpp"
 
 // Constructors
-
 Fixed::Fixed(void) 
 {
 	std::cout << "Default constructor called" << std::endl;
@@ -33,7 +32,6 @@ Fixed::Fixed(const float num)
 }
 
 // Copy constructor
-
 Fixed::Fixed(const Fixed &other)
 {
 	std::cout << "Copy constructor called" << std::endl;
@@ -41,14 +39,12 @@ Fixed::Fixed(const Fixed &other)
 }
 
 // Destructor
-
 Fixed::~Fixed(void)
 {
 	std::cout << "Destructor called" << std::endl;
 }
 
 // Operators
-
 Fixed &Fixed::operator=(const Fixed &other)
 {
 	std::cout << "Assignation operator called" << std::endl;
@@ -128,12 +124,53 @@ Fixed	Fixed::operator++(int num)
 	return aux;
 }
 
+Fixed	Fixed::operator--(void)
+{
+	value--;
+	return *this;
+}
+
+Fixed	Fixed::operator--(int num)
+{
+	Fixed aux(*this);
+
+	this->value--;
+	return aux;
+}
+
+Fixed	&Fixed::max(Fixed &fixed1, Fixed &fixed2)
+{
+	return fixed1 > fixed2 ? fixed1 : fixed2;
+}
+
+Fixed	&Fixed::min(Fixed &fixed1, Fixed &fixed2)
+{
+	return fixed1 < fixed2 ? fixed1 : fixed2;
+}
+
+const Fixed	&Fixed::max(Fixed const &fixed1, Fixed const &fixed2)
+{
+	return fixed1 > fixed2 ? fixed1 : fixed2;
+}
+
+const Fixed	&Fixed::min(Fixed const &fixed1, Fixed const &fixed2)
+{
+	return fixed1 < fixed2 ? fixed1 : fixed2;
+}
+
+std::ostream &operator<<(std::ostream &out, const Fixed &fixed)
+{
+	out << fixed.toFloat();
+	return out;
+}
+
 int		Fixed::getRawBits(void) const
 {
 	std::cout << "getRawBits member function called" << std::endl;
 	return value;
 }
 
+// Functions
 void	Fixed::setRawBits(int const raw)
 {
 	value = raw;
@@ -149,8 +186,3 @@ int		Fixed::toInt(void) const
 	return value >> n_bits;
 }
 
-std::ostream &operator<<(std::ostream &out, const Fixed &fixed)
-{
-	out << fixed.toFloat();
-	return out;
-}
