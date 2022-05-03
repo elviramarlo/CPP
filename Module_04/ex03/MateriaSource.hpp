@@ -1,22 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ZombieHorde.cpp                                    :+:      :+:    :+:   */
+/*   MateriaSource.hpp                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: elvmarti <elvmarti@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/04/10 16:48:05 by elvmarti          #+#    #+#             */
-/*   Updated: 2022/05/02 20:49:16 by elvmarti         ###   ########.fr       */
+/*   Created: 2022/05/03 16:01:14 by elvmarti          #+#    #+#             */
+/*   Updated: 2022/05/03 16:43:57 by elvmarti         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Zombie.hpp"
+#pragma once
 
-Zombie* zombieHorde(int N, std::string name)
+#include "IMateriaSource.hpp"
+
+class MateriaSource: public IMateriaSource
 {
-	Zombie *zombie = new Zombie[N];
-	
-	for (int i = 0; i < N; i++)
-		zombie[i].zombie_name(name);
-	return (zombie);
-}
+	private:
+		AMateria *m_sources[4];
+
+	public:
+		MateriaSource();
+		MateriaSource(MateriaSource const &other);
+		~MateriaSource();
+		MateriaSource &operator=(MateriaSource const &other);
+
+		void learnMateria(AMateria*);
+		AMateria* createMateria(std::string const & type);
+};

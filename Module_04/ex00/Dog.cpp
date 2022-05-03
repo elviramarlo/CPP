@@ -1,22 +1,41 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ZombieHorde.cpp                                    :+:      :+:    :+:   */
+/*   Dog.cpp                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: elvmarti <elvmarti@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/04/10 16:48:05 by elvmarti          #+#    #+#             */
-/*   Updated: 2022/05/02 20:49:16 by elvmarti         ###   ########.fr       */
+/*   Created: 2022/04/30 22:17:05 by elvmarti          #+#    #+#             */
+/*   Updated: 2022/05/02 16:33:43 by elvmarti         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Zombie.hpp"
+#include "Dog.hpp"
 
-Zombie* zombieHorde(int N, std::string name)
+Dog::Dog()
 {
-	Zombie *zombie = new Zombie[N];
-	
-	for (int i = 0; i < N; i++)
-		zombie[i].zombie_name(name);
-	return (zombie);
+	type = "Dog";
+	std::cout << "Dog constructor called" << std::endl;
+}
+
+Dog::Dog(Dog const &other)
+{
+	*this = other;
+}
+
+Dog::~Dog()
+{
+	std::cout << "Dog destructor called" << std::endl;
+}
+
+Dog &Dog::operator=(Dog const &other)
+{
+	if (this != &other)
+		this->type = other.type;
+	return *this;
+}
+
+void	Dog::makeSound() const
+{
+	std::cout << "Guau!!" << std::endl;
 }

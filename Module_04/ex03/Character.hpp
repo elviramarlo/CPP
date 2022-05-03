@@ -1,33 +1,35 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Zombie.hpp                                         :+:      :+:    :+:   */
+/*   Character.hpp                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: elvmarti <elvmarti@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/04/09 22:28:21 by elvmarti          #+#    #+#             */
-/*   Updated: 2022/05/02 20:49:03 by elvmarti         ###   ########.fr       */
+/*   Created: 2022/05/03 15:09:31 by elvmarti          #+#    #+#             */
+/*   Updated: 2022/05/03 20:28:03 by elvmarti         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef ZOMBIE_HPP
-# define ZOMBIE_HPP
+#pragma once
 
-# include <iostream>
+#include "ICharacter.hpp"
 
-class Zombie
+class Character: public ICharacter
 {
 	private:
-		std::string name;
-	
+		AMateria *m_inventory[4];
+		std::string	name;
+
 	public:
-		Zombie();
-		~Zombie(void);
+		Character(void);
+		Character(std::string const &name);
+		Character(Character const &other);
+		~Character();
 
-		void 	zombie_name(std::string name);
-		void	announce(void);
+		Character	&operator=(const Character &other);
+
+		std::string const & getName() const;
+		void	equip(AMateria* m);
+		void	unequip(int idx);
+		void	use(int idx, ICharacter& target);
 };
-
-Zombie* zombieHorde(int N, std::string name);
-
-#endif

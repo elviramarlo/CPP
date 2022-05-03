@@ -1,0 +1,91 @@
+--- CONST ---
+    int  variable = 1;
+	const int   constante = 2;
+	const int * puntero_a_constante = &constante;
+    int *const puntero_constante_a_variable = &variable;
+	const int *const puntero_constante_a_constante = &constante;
+
+En un método (función miembro) significa que es de "sólo lectura", no puede 
+modificar ninguna variable.
+
+
+--- STATIC ---
+Una variable estática de una clase es un dato común a todas las instancias de 
+esta clase y accesible en todos los métodos. Una variable miembro estática es 
+incluso accesible sin instancia alguna.
+Los métodos de clases también pueden ser static. Declarar un método estático es 
+una promesa de que este método sólo utiliza miembros estáticos de la clase. Este 
+tipo de método no conoce el puntero this, por lo cual no se puede hacer 
+directamente referencia a métodos y variables no estátitcos de la clase.
+
+class MiClase
+{
+public:
+    static int mi_variable;
+};
+
+Esta variable se inicializa así:
+
+int MiClase::mi_variable = 5;
+
+
+--- PUNTEROS A FUNCIONES ---
+Los punteros a funciones son variables que guardan una dirección de memoria: la 
+dirección de una función.
+
+void imprime()
+{ 
+  printf("Imprimiendo un message\n"); 
+}
+int  main()
+{
+  void (*ptr_funct)(void) = imprime;
+  ptr_funct(); //Llama a imprime
+  return 0;
+}
+
+
+--- VISIBILITY ---
+private, protected, public
+
+
+--- VIRTUAL DESTRUCTORS ---
+Making base class destructor virtual guarantees that the object of derived class 
+is destructed properly, i.e., both base class and derived class destructors 
+are called.
+Virtual destructors are useful when you might potentially delete an instance of 
+a derived class through a pointer to base class.
+
+
+--- INTERFAZ ---
+Clase que sirve de base, con métodos no implementados. No se pueden instanciar 
+estas clases.
+
+
+--------------------------------------------------------------------------------
+
+MODULE 00:
+(ex02): static y const
+
+MODULE 01:
+Heap y stack. New y delete.
+Punteros y referencias.
+Punteros a funciones.
+Switch.
+
+MODULE 02:
+Puntos flotantes y puntos fijos. Sobrecarga de operadores.
+Los ints y floats se convierten en números de punto fijo moviendo 8 bits a la 
+derecha (por ej. el 1 se convierte así en binario en 100000000, y "ponemos" un 
+punto en 1.00000000. Con los floats igual pero multiplicando por el número 
+por (1 << 8) porque no se puede hacer bitwise en floats directamente)). Para
+convertirlos de nuevo en ints o floats hacemos lo inverso (mover a la izq).
+Esto permite operaciones entre números sin perder precisión.
+
+MODULE 03:
+Herencia, problema de la herencia múltiple en diamante (B y C derivan de A, y D 
+deriva a su vez de B y C), se soluciona con virtual.
+
+MODULE 04:
+Polimorfismo, métodos virtuales, virtual destructors, clases abstractas e 
+interfaces.

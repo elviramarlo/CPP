@@ -6,7 +6,7 @@
 /*   By: elvmarti <elvmarti@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/27 18:36:46 by elvmarti          #+#    #+#             */
-/*   Updated: 2022/04/30 20:31:24 by elvmarti         ###   ########.fr       */
+/*   Updated: 2022/05/02 21:08:32 by elvmarti         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 
 # include "ClapTrap.hpp"
 
-class FragTrap: virtual public ClapTrap //Virtual para que no se creen dos claptrap desde diamond! (lo llama desde scavtrap)
+class FragTrap: virtual public ClapTrap //Virtual para que no se creen dos claptrap desde diamond!
 {
 	public:
 		FragTrap(void);

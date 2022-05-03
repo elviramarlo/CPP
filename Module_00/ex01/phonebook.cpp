@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Phonebook.cpp                                      :+:      :+:    :+:   */
+/*   phonebook.cpp                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: elvmarti <elvmarti@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/31 18:23:08 by elvmarti          #+#    #+#             */
-/*   Updated: 2022/04/01 15:09:03 by elvmarti         ###   ########.fr       */
+/*   Updated: 2022/05/03 14:00:26 by elvmarti         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,24 +14,13 @@
 
 void	Phonebook::add_contact()
 {
-	contact[i].create_contact();
-	if (i < 7)
-		i++;
-	else
-		i = 0;
-}
-
-static bool	is_num(std::string num)
-{
-	for (int i = 0; i < num.length(); i++)
+	if (contact[i].create_contact())
 	{
-		if (!isdigit(num[i]))
-		{
-			std::cout << "Incorrect index!" << std::endl;
-			return false;
-		}
+		if (i < 7)
+			i++;
+		else
+			i = 0;
 	}
-	return true;
 }
 
 void	Phonebook::search_contact()
@@ -47,7 +36,7 @@ void	Phonebook::search_contact()
 	std::cout << std::endl << std::endl << "Which contact do you want to see?: ";
 	std::getline(std::cin, num_contact);
 	std::cout << std::endl;
-	if (is_num(num_contact))
+	if (is_num(num_contact, 1))
 	{
 		if (!num_contact[0] || stoi(num_contact) > 8)
 			std::cout << "No contact with that index" << std::endl;

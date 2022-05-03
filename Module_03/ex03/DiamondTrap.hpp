@@ -6,11 +6,12 @@
 /*   By: elvmarti <elvmarti@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/27 22:33:07 by elvmarti          #+#    #+#             */
-/*   Updated: 2022/04/30 18:45:09 by elvmarti         ###   ########.fr       */
+/*   Updated: 2022/04/30 21:30:30 by elvmarti         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#pragma once
+#ifndef DIAMONDTRAP_HPP
+#define DIAMONDTRAP_HPP
 
 # include "ScavTrap.hpp"
 # include "FragTrap.hpp"
@@ -31,3 +32,5 @@ class DiamondTrap: public ScavTrap, public FragTrap
 };
 
 std::ostream	&operator<<(std::ostream &out, const DiamondTrap &diamondtrap);
+
+#endif

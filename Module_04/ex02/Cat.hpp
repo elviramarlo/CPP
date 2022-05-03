@@ -1,22 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ZombieHorde.cpp                                    :+:      :+:    :+:   */
+/*   Cat.hpp                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: elvmarti <elvmarti@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/04/10 16:48:05 by elvmarti          #+#    #+#             */
-/*   Updated: 2022/05/02 20:49:16 by elvmarti         ###   ########.fr       */
+/*   Created: 2022/04/30 21:46:57 by elvmarti          #+#    #+#             */
+/*   Updated: 2022/05/02 18:58:15 by elvmarti         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Zombie.hpp"
+#pragma once
 
-Zombie* zombieHorde(int N, std::string name)
+#include "Animal.hpp"
+#include "Brain.hpp"
+
+class Cat: public Animal
 {
-	Zombie *zombie = new Zombie[N];
-	
-	for (int i = 0; i < N; i++)
-		zombie[i].zombie_name(name);
-	return (zombie);
-}
+	private:
+		Brain *brain;
+	public:
+		Cat();
+		Cat(Cat const &other);
+		~Cat();
+		Cat &operator=(Cat const &other);
+
+		virtual void	makeSound() const;
+		void	think() const;
+};
+

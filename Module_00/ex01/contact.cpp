@@ -6,13 +6,13 @@
 /*   By: elvmarti <elvmarti@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/31 18:24:24 by elvmarti          #+#    #+#             */
-/*   Updated: 2022/04/01 14:28:15 by elvmarti         ###   ########.fr       */
+/*   Updated: 2022/05/03 14:04:44 by elvmarti         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Contact.hpp"
 
-void	Contact::create_contact()
+bool	Contact::create_contact()
 {
 	std::cout << "Introduce first name: ";
 	std::getline(std::cin, first_name);
@@ -20,10 +20,20 @@ void	Contact::create_contact()
 	std::getline(std::cin, last_name);
 	std::cout << "Introduce nickname: ";
 	std::getline(std::cin, nickname);
-	std::cout << "Introduce number phone: ";
+	std::cout << "Introduce phone number: ";
 	std::getline(std::cin, phone);
+	if (!is_num(phone, 0))
+	{
+		std::cout << std::endl << "Phone number must only contain digits!" << std::endl;
+		first_name = "";
+		last_name = "";
+		nickname = "";
+		phone = "";
+		return false;
+	}
 	std::cout << "Introduce the darkest secret: ";
 	std::getline(std::cin, darkest_secret);
+	return true;
 }
 
 static void	print_info_contact(std::string info, int x)

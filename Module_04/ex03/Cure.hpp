@@ -1,22 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ZombieHorde.cpp                                    :+:      :+:    :+:   */
+/*   Cure.hpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: elvmarti <elvmarti@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/04/10 16:48:05 by elvmarti          #+#    #+#             */
-/*   Updated: 2022/05/02 20:49:16 by elvmarti         ###   ########.fr       */
+/*   Created: 2022/05/02 22:23:05 by elvmarti          #+#    #+#             */
+/*   Updated: 2022/05/03 15:00:49 by elvmarti         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Zombie.hpp"
+#pragma once
 
-Zombie* zombieHorde(int N, std::string name)
+#include "AMateria.hpp"
+
+class Cure: public AMateria
 {
-	Zombie *zombie = new Zombie[N];
-	
-	for (int i = 0; i < N; i++)
-		zombie[i].zombie_name(name);
-	return (zombie);
-}
+	public:
+		Cure(void);
+		Cure(Cure const &other);
+		~Cure(void);
+
+		Cure &operator=(Cure const &other);
+
+		std::string const &	getType() const;
+		AMateria*	clone() const;
+		void	use(ICharacter& target);
+};
+

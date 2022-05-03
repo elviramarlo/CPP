@@ -6,7 +6,7 @@
 /*   By: elvmarti <elvmarti@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/26 18:01:50 by elvmarti          #+#    #+#             */
-/*   Updated: 2022/04/27 13:44:19 by elvmarti         ###   ########.fr       */
+/*   Updated: 2022/05/02 21:02:51 by elvmarti         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -110,7 +110,7 @@ Fixed	Fixed::operator/(const Fixed &other) const
 	return aux;
 }
 
-Fixed	Fixed::operator++(void)
+Fixed	Fixed::operator++(void) //Suma 0.00000001 (lo mínimo que se puede sumar mayor que 0)
 {
 	value++;
 	return *this;

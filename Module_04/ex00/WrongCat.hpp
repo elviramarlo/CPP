@@ -1,22 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ZombieHorde.cpp                                    :+:      :+:    :+:   */
+/*   WrongCat.hpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: elvmarti <elvmarti@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/04/10 16:48:05 by elvmarti          #+#    #+#             */
-/*   Updated: 2022/05/02 20:49:16 by elvmarti         ###   ########.fr       */
+/*   Created: 2022/05/02 16:50:02 by elvmarti          #+#    #+#             */
+/*   Updated: 2022/05/02 19:33:01 by elvmarti         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Zombie.hpp"
+#pragma once
 
-Zombie* zombieHorde(int N, std::string name)
+#include "WrongAnimal.hpp"
+
+class WrongCat: public WrongAnimal
 {
-	Zombie *zombie = new Zombie[N];
-	
-	for (int i = 0; i < N; i++)
-		zombie[i].zombie_name(name);
-	return (zombie);
-}
+	public:
+		WrongCat();
+		WrongCat(WrongCat const &other);
+		~WrongCat();
+		WrongCat &operator=(WrongCat const &other);
+
+		void	makeSound() const;
+};

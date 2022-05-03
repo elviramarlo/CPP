@@ -6,7 +6,7 @@
 /*   By: elvmarti <elvmarti@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/22 18:13:37 by elvmarti          #+#    #+#             */
-/*   Updated: 2022/03/31 20:54:07 by elvmarti         ###   ########.fr       */
+/*   Updated: 2022/05/03 14:07:44 by elvmarti         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,6 +28,22 @@ int	main(void)
 			phone.add_contact();
 		else if (arg == "SEARCH")
 			phone.search_contact();
+		else
+			std::cout << "Invalid command :(" << std::endl;
 	}
 	return 0;
+}
+
+bool	is_num(std::string num, int x)
+{
+	for (int i = 0; i < num.length(); i++)
+	{
+		if (!isdigit(num[i]))
+		{
+			if (x)
+				std::cout << "Incorrect index!" << std::endl;
+			return false;
+		}
+	}
+	return true;
 }

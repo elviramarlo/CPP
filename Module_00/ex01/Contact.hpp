@@ -6,7 +6,7 @@
 /*   By: elvmarti <elvmarti@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/22 18:06:50 by elvmarti          #+#    #+#             */
-/*   Updated: 2022/03/31 20:39:34 by elvmarti         ###   ########.fr       */
+/*   Updated: 2022/05/03 14:00:14 by elvmarti         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,9 +25,11 @@ class Contact
 		std::string phone;
 		std::string darkest_secret;
 	public:
-		void	create_contact();
+		bool	create_contact();
 		void	show_contact();
 		void	show_all_data();
 };
+
+bool	is_num(std::string num, int x);
 
 #endif

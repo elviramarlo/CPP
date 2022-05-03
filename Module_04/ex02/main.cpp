@@ -1,22 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ZombieHorde.cpp                                    :+:      :+:    :+:   */
+/*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: elvmarti <elvmarti@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/04/10 16:48:05 by elvmarti          #+#    #+#             */
-/*   Updated: 2022/05/02 20:49:16 by elvmarti         ###   ########.fr       */
+/*   Created: 2022/04/30 21:52:31 by elvmarti          #+#    #+#             */
+/*   Updated: 2022/05/02 19:58:09 by elvmarti         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Zombie.hpp"
+#include "Cat.hpp"
+#include "Dog.hpp"
 
-Zombie* zombieHorde(int N, std::string name)
+int main()
 {
-	Zombie *zombie = new Zombie[N];
+	//Animal *i = new Animal();
+	Animal *j = new Cat();
 	
-	for (int i = 0; i < N; i++)
-		zombie[i].zombie_name(name);
-	return (zombie);
+	j->makeSound();
+	delete j;
 }
