@@ -6,7 +6,7 @@
 /*   By: elvmarti <elvmarti@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/30 21:52:31 by elvmarti          #+#    #+#             */
-/*   Updated: 2022/05/02 22:15:52 by elvmarti         ###   ########.fr       */
+/*   Updated: 2022/05/03 21:13:29 by elvmarti         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@
 
 int main()
 {
-	const n_animals = 4;
+	const int n_animals = 4;
 	const Animal *animals[n_animals];
 
 	for (int i = 0; i < n_animals; i++)
