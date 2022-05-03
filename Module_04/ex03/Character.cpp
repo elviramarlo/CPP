@@ -6,7 +6,7 @@
 /*   By: elvmarti <elvmarti@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/03 15:15:25 by elvmarti          #+#    #+#             */
-/*   Updated: 2022/05/03 20:43:30 by elvmarti         ###   ########.fr       */
+/*   Updated: 2022/05/03 21:15:00 by elvmarti         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,14 +14,14 @@
 
 Character::Character(): name("Luis")
 {
-	std::cout << "Constructor called" << std::endl;
+	//std::cout << "Constructor called" << std::endl;
 	for (int i = 0; i < 4; i++)
 		m_inventory[i] = NULL;	
 }
 
 Character::Character(std::string const &name)
 {
-	std::cout << "Constructor called" << std::endl;
+	//std::cout << "Constructor called" << std::endl;
 	this->name = name;
 	for (int i = 0; i < 4; i++)
 		m_inventory[i] = NULL;
@@ -35,7 +35,7 @@ Character::Character(Character const &other)
 
 Character	&Character::operator=(const Character &other)
 {
-	std::cout << "Copy operator called" << std::endl;
+	//std::cout << "Copy operator called" << std::endl;
 	if (this != &other)
 	{
 		this->name = other.name;
@@ -56,7 +56,7 @@ Character::~Character()
 		if (this->m_inventory[i])
 			delete this->m_inventory[i];
 	}
-	std::cout << "Destructor called" << std::endl;
+	//std::cout << "Destructor called" << std::endl;
 }
 
 std::string const &Character::getName() const
