@@ -1,35 +1,42 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Bureaucrat.hpp                                     :+:      :+:    :+:   */
+/*   Form.hpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: elvmarti <elvmarti@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/05/04 17:32:10 by elvmarti          #+#    #+#             */
-/*   Updated: 2022/05/05 17:01:13 by elvmarti         ###   ########.fr       */
+/*   Created: 2022/05/05 15:21:27 by elvmarti          #+#    #+#             */
+/*   Updated: 2022/05/05 17:06:40 by elvmarti         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #pragma once
 
 #include <iostream>
+#include "Bureaucrat.hpp"
 
-class Bureaucrat
+class Bureaucrat;
+
+class Form
 {
 	private:
 		const std::string	name;
-		int					grade;
+		const int			sig_grade;
+		const int			exec_grade;
+		bool				is_signed;
 	
 	public:
-		Bureaucrat(const std::string &name, int i);
-		Bureaucrat(Bureaucrat const &other);
-		~Bureaucrat();
-		Bureaucrat &operator=(Bureaucrat const &other);
-		
+		Form(const std::string _name, const int sig_grade, const int _exec_grade);
+		Form(Form const &other);
+		~Form();
+		Form &operator=(Form const &other);
+
 		std::string getName() const;
-		int			getGrade() const;
-		void		incrementGrade();
-		void		decrementGrade();
+		bool		getIsSigned() const;
+		int			getSignedGrade() const;
+		int			getExecGrade() const;
+
+		void	beSigned(Bureaucrat &bur);
 
 		class GradeTooHighException: public std::exception
 		{
@@ -44,4 +51,4 @@ class Bureaucrat
 		};
 };
 
-std::ostream &operator<<(std::ostream &out, const Bureaucrat &bureaucrat);
+std::ostream &operator<<(std::ostream &out, const Form &form);
