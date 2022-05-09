@@ -6,7 +6,7 @@
 #    By: elvmarti <elvmarti@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/03/22 14:49:03 by elvmarti          #+#    #+#              #
-#    Updated: 2022/03/31 18:24:13 by elvmarti         ###   ########.fr        #
+#    Updated: 2022/05/10 00:35:21 by elvmarti         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -16,7 +16,7 @@ CC = clang++
 
 FLAGS = -Wall -Wextra -Werror -std=c++98
 
-SRCS = main.cpp phonebook.cpp contact.cpp
+SRCS = main.cpp Phonebook.cpp Contact.cpp
 
 OBJS = $(SRCS:.cpp=.o)
 

@@ -29,7 +29,7 @@ Esta variable se inicializa así:
 int MiClase::mi_variable = 5;
 
 --- REFERENCIAS ---
-Son como punteros que siempre son const
+Son como punteros que siempre son const y que nunca pueden ser null.
 
 
 --- PUNTEROS A FUNCIONES ---
