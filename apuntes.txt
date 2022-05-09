@@ -28,6 +28,9 @@ Esta variable se inicializa así:
 
 int MiClase::mi_variable = 5;
 
+--- REFERENCIAS ---
+Son como punteros que siempre son const
+
 
 --- PUNTEROS A FUNCIONES ---
 Los punteros a funciones son variables que guardan una dirección de memoria: la 

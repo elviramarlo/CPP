@@ -6,7 +6,7 @@
 /*   By: elvmarti <elvmarti@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/10 15:18:38 by elvmarti          #+#    #+#             */
-/*   Updated: 2022/04/10 17:40:16 by elvmarti         ###   ########.fr       */
+/*   Updated: 2022/05/09 21:15:58 by elvmarti         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,8 +19,7 @@ int	main(int argc, char **argv)
 		std::cout << "-- ALLOCATED ON THE HEAP --" << std::endl;
 		for (int i = 1; i < argc; i ++)
 		{
-			Zombie *zombie;
-			zombie = newZombie(argv[i]);
+			Zombie *zombie = newZombie(argv[i]);
 			zombie->announce();
 			delete zombie;
 		}

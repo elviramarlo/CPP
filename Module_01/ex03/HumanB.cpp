@@ -6,7 +6,7 @@
 /*   By: elvmarti <elvmarti@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/10 19:26:51 by elvmarti          #+#    #+#             */
-/*   Updated: 2022/04/11 21:18:45 by elvmarti         ###   ########.fr       */
+/*   Updated: 2022/05/09 20:22:19 by elvmarti         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,8 +26,7 @@ HumanB::~HumanB()
 void HumanB::attack()
 {
 	if (weapon == NULL)
-		std::cout << name << " attacks whith his own hands"
-		<< std::endl;
+		std::cout << name << " attacks whith his own hands" << std::endl;
 	else
 		std::cout << name << " attacks whith this " << weapon->getType()
 		<< std::endl;

@@ -6,7 +6,7 @@
 /*   By: elvmarti <elvmarti@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/10 18:05:22 by elvmarti          #+#    #+#             */
-/*   Updated: 2022/04/10 20:54:19 by elvmarti         ###   ########.fr       */
+/*   Updated: 2022/05/09 21:04:58 by elvmarti         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,6 +26,5 @@
 	
 	std::string const& Weapon::getType()
 	{
-		std::string const &typeREF = type;
-		return (typeREF);
+		return type;
 	}

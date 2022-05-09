@@ -6,7 +6,7 @@
 /*   By: elvmarti <elvmarti@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/10 15:12:25 by elvmarti          #+#    #+#             */
-/*   Updated: 2022/04/10 16:47:38 by elvmarti         ###   ########.fr       */
+/*   Updated: 2022/05/09 21:13:29 by elvmarti         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,5 @@
 
 Zombie* newZombie(std::string name)
 {
-	Zombie 	*zombie = new Zombie(name);
-	return(zombie);
+	return(new Zombie(name));
 }

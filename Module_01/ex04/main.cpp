@@ -6,7 +6,7 @@
 /*   By: elvmarti <elvmarti@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/10 23:41:39 by elvmarti          #+#    #+#             */
-/*   Updated: 2022/04/13 15:52:39 by elvmarti         ###   ########.fr       */
+/*   Updated: 2022/05/09 21:34:36 by elvmarti         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,11 +28,11 @@ static void	replace(std::ifstream &f_r, std::ofstream &f_w, std::string s1, std:
 	{
 		std::getline(f_r, file_string);
 		first_pos = file_string.find(s1);
-		while (first_pos != std::string::npos)
+		while (first_pos != std::string::npos) //if it's a match
 		{
 			file_string.erase(first_pos, s1.length());
 			file_string.insert(first_pos, s2);
-			first_pos = file_string.find(s1, first_pos + 1);
+			first_pos = file_string.find(s1, first_pos + 1); //only includes characters after pos
 		}
 		f_w << file_string << std::endl;
 	}
