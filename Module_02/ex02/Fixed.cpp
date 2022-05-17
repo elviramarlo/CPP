@@ -6,48 +6,47 @@
 /*   By: elvmarti <elvmarti@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/26 18:01:50 by elvmarti          #+#    #+#             */
-/*   Updated: 2022/05/03 22:43:10 by elvmarti         ###   ########.fr       */
+/*   Updated: 2022/05/18 01:40:01 by elvmarti         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Fixed.hpp"
 
 // Constructors
-Fixed::Fixed(void) 
+Fixed::Fixed(void): value(0)
 {
-	std::cout << "Default constructor called" << std::endl;
-	setRawBits(0);
+	//std::cout << "Default constructor called" << std::endl;
 }
 
 Fixed::Fixed(const int num)
 {
-	std::cout << "Int constructor called" << std::endl;
+	//std::cout << "Int constructor called" << std::endl;
 	this->value = num << this->n_bits;
 }
 
 Fixed::Fixed(const float num)
 {
-	std::cout << "Float constructor called" << std::endl;
+	//std::cout << "Float constructor called" << std::endl;
 	value = roundf(num * (1 << this->n_bits));
 }
 
 // Copy constructor
 Fixed::Fixed(const Fixed &other)
 {
-	std::cout << "Copy constructor called" << std::endl;
+	//std::cout << "Copy constructor called" << std::endl;
 	*this = other;
 }
 
 // Destructor
 Fixed::~Fixed(void)
 {
-	std::cout << "Destructor called" << std::endl;
+	//std::cout << "Destructor called" << std::endl;
 }
 
 // Operators
 Fixed &Fixed::operator=(const Fixed &other)
 {
-	std::cout << "Assignation operator called" << std::endl;
+	//std::cout << "Assignation operator called" << std::endl;
 	value = other.getRawBits();
 	return *this;
 }
@@ -110,7 +109,7 @@ Fixed	Fixed::operator/(const Fixed &other) const
 	return aux;
 }
 
-Fixed	Fixed::operator++(void) //Suma 0.00000001 (lo mínimo que se puede sumar mayor que 0)
+Fixed	Fixed::operator++(void) //Add 0.00000001 (the min that can be added greater than 0)
 {
 	value++;
 	return *this;
@@ -124,13 +123,13 @@ Fixed	Fixed::operator++(int num)
 	return aux;
 }
 
-Fixed	Fixed::operator--(void)
+Fixed	Fixed::operator--(void) // --i
 {
 	value--;
 	return *this;
 }
 
-Fixed	Fixed::operator--(int num)
+Fixed	Fixed::operator--(int num) // i--
 {
 	Fixed aux(*this);
 
@@ -167,7 +166,7 @@ std::ostream &operator<<(std::ostream &out, const Fixed &fixed)
 // Functions
 int		Fixed::getRawBits(void) const
 {
-	std::cout << "getRawBits member function called" << std::endl;
+	//std::cout << "getRawBits member function called" << std::endl;
 	return value;
 }
 

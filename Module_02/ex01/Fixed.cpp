@@ -6,16 +6,15 @@
 /*   By: elvmarti <elvmarti@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/19 19:45:30 by elvmarti          #+#    #+#             */
-/*   Updated: 2022/04/26 17:57:54 by elvmarti         ###   ########.fr       */
+/*   Updated: 2022/05/18 01:40:29 by elvmarti         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Fixed.hpp"
 
-Fixed::Fixed(void) 
+Fixed::Fixed(void): value(0)
 {
 	std::cout << "Default constructor called" << std::endl;
-	setRawBits(0);
 }
 
 Fixed::Fixed(const int num)
