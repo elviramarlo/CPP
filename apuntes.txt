@@ -65,6 +65,15 @@ Clase que sirve de base, con métodos no implementados. No se pueden instanciar
 estas clases.
 
 
+--- CASTS ---
+static_cast: para castear valores simples (float, int, char...)
+dynamic_cast: no da error en la compilación a diferencia de los otros casteos, sino 
+            durante el runtime (devuelve NULL si el casteo falla). Se utiliza
+			con clases polimórficas.
+reinterpret_cast: no cambia los bits de la dirección de memoria, sólo la reinterpreta
+const_cast: no recomendable pero útil para castear un const en un no const
+
+
 --------------------------------------------------------------------------------
 
 MODULE 00:

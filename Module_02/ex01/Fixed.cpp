@@ -6,11 +6,17 @@
 /*   By: elvmarti <elvmarti@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/19 19:45:30 by elvmarti          #+#    #+#             */
-/*   Updated: 2022/05/18 01:40:29 by elvmarti         ###   ########.fr       */
+/*   Updated: 2022/05/18 15:15:24 by elvmarti         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Fixed.hpp"
+
+/* 
+** Shifting an integer to the right by 1 bit position is equivalent to dividing the number by 2.
+** 53 = 110101
+** 26.5 = 11010.1
+*/
 
 Fixed::Fixed(void): value(0)
 {
@@ -26,7 +32,7 @@ Fixed::Fixed(const int num)
 Fixed::Fixed(const float num)
 {
 	std::cout << "Float constructor called" << std::endl;
-	value = roundf(num * (1 << this->n_bits));
+	value = roundf(num * (1 << this->n_bits)); // same as 2^n_bits
 }
 
 Fixed::Fixed(const Fixed &other)
