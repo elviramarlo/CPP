@@ -6,7 +6,7 @@
 /*   By: elvmarti <elvmarti@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/21 21:53:57 by elvmarti          #+#    #+#             */
-/*   Updated: 2022/05/21 22:31:23 by elvmarti         ###   ########.fr       */
+/*   Updated: 2022/05/21 22:33:40 by elvmarti         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,4 +44,3 @@ class Array
 		};
 		unsigned int size(void) const { return this->len; };
 };
-
