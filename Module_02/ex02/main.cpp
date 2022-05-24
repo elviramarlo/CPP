@@ -6,7 +6,7 @@
 /*   By: elvmarti <elvmarti@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/19 16:40:43 by elvmarti          #+#    #+#             */
-/*   Updated: 2022/05/18 01:38:59 by elvmarti         ###   ########.fr       */
+/*   Updated: 2022/05/19 17:23:25 by elvmarti         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,6 +35,8 @@ int main( void )
 		std::cout << a << std::endl;
 		std::cout << b << std::endl;
 		std::cout << c << std::endl;
+
+		std::cout << c.toInt() << std::endl;
 		
 		if (a != b)
 			std::cout << "a != b" << std::endl;

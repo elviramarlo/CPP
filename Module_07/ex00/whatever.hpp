@@ -6,7 +6,7 @@
 /*   By: elvmarti <elvmarti@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/19 17:44:13 by elvmarti          #+#    #+#             */
-/*   Updated: 2022/05/19 18:01:55 by elvmarti         ###   ########.fr       */
+/*   Updated: 2022/05/24 17:35:35 by elvmarti         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 #include <iostream>
 
-template <typename T>
+template<typename T>
 void swap(T &a, T &b)
 {
 	T tmp;

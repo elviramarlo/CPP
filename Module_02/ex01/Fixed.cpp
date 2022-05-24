@@ -6,7 +6,7 @@
 /*   By: elvmarti <elvmarti@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/19 19:45:30 by elvmarti          #+#    #+#             */
-/*   Updated: 2022/05/18 15:15:24 by elvmarti         ###   ########.fr       */
+/*   Updated: 2022/05/19 17:21:57 by elvmarti         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -55,7 +55,6 @@ Fixed &Fixed::operator=(const Fixed &other)
 
 int		Fixed::getRawBits(void) const
 {
-	std::cout << "getRawBits member function called" << std::endl;
 	return value;
 }
 

@@ -6,7 +6,7 @@
 /*   By: elvmarti <elvmarti@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/10 15:18:38 by elvmarti          #+#    #+#             */
-/*   Updated: 2022/05/09 21:15:58 by elvmarti         ###   ########.fr       */
+/*   Updated: 2022/05/17 17:05:08 by elvmarti         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,6 +28,6 @@ int	main(int argc, char **argv)
 			randomChump(argv[i]);
 	}
 	else
-		std::cout << std::endl << "One name (or more) is needed." << std::endl;
+		std::cout << "One name (or more) is needed." << std::endl;
 	return 0;
 }

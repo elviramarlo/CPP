@@ -6,7 +6,7 @@
 /*   By: elvmarti <elvmarti@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/31 18:23:08 by elvmarti          #+#    #+#             */
-/*   Updated: 2022/05/03 14:00:26 by elvmarti         ###   ########.fr       */
+/*   Updated: 2022/05/10 17:37:42 by elvmarti         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,8 +30,11 @@ void	Phonebook::search_contact()
 	std::cout << "     Index|First name| Last name|  Nickname" << std::endl;
 	for (int index = 1; index <= 8; index++)
 	{
-		std::cout << std::setw(10) << index << "|";
-		contact[index - 1].show_contact();
+		if (contact[index - 1].check_contact())
+		{
+			std::cout << std::setw(10) << index << "|";
+			contact[index - 1].show_contact();
+		}
 	}
 	std::cout << std::endl << std::endl << "Which contact do you want to see?: ";
 	std::getline(std::cin, num_contact);

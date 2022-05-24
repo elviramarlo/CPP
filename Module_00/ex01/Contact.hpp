@@ -6,7 +6,7 @@
 /*   By: elvmarti <elvmarti@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/22 18:06:50 by elvmarti          #+#    #+#             */
-/*   Updated: 2022/05/03 14:00:14 by elvmarti         ###   ########.fr       */
+/*   Updated: 2022/05/10 17:32:39 by elvmarti         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,6 +28,7 @@ class Contact
 		bool	create_contact();
 		void	show_contact();
 		void	show_all_data();
+		bool	check_contact();
 };
 
 bool	is_num(std::string num, int x);

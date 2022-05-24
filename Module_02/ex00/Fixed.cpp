@@ -6,7 +6,7 @@
 /*   By: elvmarti <elvmarti@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/19 19:45:30 by elvmarti          #+#    #+#             */
-/*   Updated: 2022/05/18 01:39:39 by elvmarti         ###   ########.fr       */
+/*   Updated: 2022/05/19 17:21:35 by elvmarti         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,7 +41,7 @@ int		Fixed::getRawBits(void) const
 	return value;
 }
 
-void	Fixed::setRawBits (int const raw)
+void	Fixed::setRawBits(int const raw)
 {
 	value = raw;
 }

@@ -6,7 +6,7 @@
 /*   By: elvmarti <elvmarti@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/10 17:44:48 by elvmarti          #+#    #+#             */
-/*   Updated: 2022/04/11 20:15:24 by elvmarti         ###   ########.fr       */
+/*   Updated: 2022/05/17 17:16:32 by elvmarti         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,5 +25,5 @@ int	main()
 
 	std::cout << "STRING: " << std::endl;
 	std::cout << "StringPTR: "<< *stringPTR << std::endl;
-	std::cout << "StringREF: " << stringREF << std::endl << std::endl;
+	std::cout << "StringREF: " << stringREF << std::endl;
 }

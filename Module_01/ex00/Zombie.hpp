@@ -6,7 +6,7 @@
 /*   By: elvmarti <elvmarti@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/09 22:28:21 by elvmarti          #+#    #+#             */
-/*   Updated: 2022/04/10 15:06:12 by elvmarti         ###   ########.fr       */
+/*   Updated: 2022/05/17 17:04:06 by elvmarti         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,6 +21,7 @@ class Zombie
 		std::string name;
 	
 	public:
+		Zombie(void);
 		Zombie(std::string name);
 		~Zombie(void);
 

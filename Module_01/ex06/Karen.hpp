@@ -6,7 +6,7 @@
 /*   By: elvmarti <elvmarti@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/19 15:21:42 by elvmarti          #+#    #+#             */
-/*   Updated: 2022/04/19 15:55:23 by elvmarti         ###   ########.fr       */
+/*   Updated: 2022/05/17 17:32:15 by elvmarti         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,14 +17,14 @@
 
 class Karen
 {
-private:
-	void	debug(void);
-	void	info(void);
-	void	warning(void);
-	void	error(void);
+	private:
+		void	debug(void);
+		void	info(void);
+		void	warning(void);
+		void	error(void);
 
-public:
-	void	complain(std::string level);
+	public:
+		void	complain(std::string level);
 };
 
 #endif

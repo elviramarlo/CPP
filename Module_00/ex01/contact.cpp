@@ -6,7 +6,7 @@
 /*   By: elvmarti <elvmarti@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/31 18:24:24 by elvmarti          #+#    #+#             */
-/*   Updated: 2022/05/03 14:04:44 by elvmarti         ###   ########.fr       */
+/*   Updated: 2022/05/10 17:33:32 by elvmarti         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -65,3 +65,10 @@ void	Contact::show_all_data()
 	std::cout << "Phone number: " << phone << std::endl;
 	std::cout << "Darkest secret: " << darkest_secret << std::endl;
 }
+
+	bool	Contact::check_contact()
+	{
+		if (!first_name.empty())
+			return true;
+		return false;
+	}
