@@ -6,7 +6,7 @@
 /*   By: elvmarti <elvmarti@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/21 21:53:57 by elvmarti          #+#    #+#             */
-/*   Updated: 2022/05/21 22:33:40 by elvmarti         ###   ########.fr       */
+/*   Updated: 2022/05/31 15:28:31 by elvmarti         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,6 +31,7 @@ class Array
 			if (this != &other)
 			{
 				this->len = other.len;
+				this->element = new T[other.len];
 				for (int i = 0; i < len; i++)
 					this->element[i] = other.element[i];
 			}

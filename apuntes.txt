@@ -10,13 +10,12 @@ modificar ninguna variable.
 
 
 --- STATIC ---
-Una variable estática de una clase es un dato común a todas las instancias de 
+Una variable estática de una clase es un variable que comparten todas las instancias de 
 esta clase y accesible en todos los métodos. Una variable miembro estática es 
-incluso accesible sin instancia alguna.
-Los métodos de clases también pueden ser static. Declarar un método estático es 
-una promesa de que este método sólo utiliza miembros estáticos de la clase. Este 
-tipo de método no conoce el puntero this, por lo cual no se puede hacer 
-directamente referencia a métodos y variables no estátitcos de la clase.
+también accesible sin ninguna instancia.
+Los métodos de clases también pueden ser static. Un método estático sólo utiliza
+miembros estáticos de la clase. Este tipo de método no tiene puntero this, por 
+lo cual no se puede hacer directamente referencia a métodos y variables no estátitcos de la clase.
 
 class MiClase
 {
@@ -24,7 +23,7 @@ public:
     static int mi_variable;
 };
 
-Esta variable se inicializa así:
+Se inicializa así:
 
 int MiClase::mi_variable = 5;
 
@@ -38,7 +37,7 @@ dirección de una función.
 
 void imprime()
 { 
-  printf("Imprimiendo un message\n"); 
+  printf("Imprimiendo un mensaje\n"); 
 }
 int  main()
 {
@@ -101,3 +100,7 @@ deriva a su vez de B y C), se soluciona con virtual.
 MODULE 04:
 Polimorfismo, métodos virtuales, virtual destructors, clases abstractas e 
 interfaces.
+
+MODULE 07:
+Templates
+default type: template<typename T = float> (si no se indica el tipo será float)
