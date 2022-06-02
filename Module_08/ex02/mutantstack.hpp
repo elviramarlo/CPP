@@ -6,7 +6,7 @@
 /*   By: elvmarti <elvmarti@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/30 18:36:23 by elvmarti          #+#    #+#             */
-/*   Updated: 2022/06/02 17:07:40 by elvmarti         ###   ########.fr       */
+/*   Updated: 2022/06/02 17:30:24 by elvmarti         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,6 @@
 
 #include <iostream>
 #include <stack>
-#include <vector>
-#include <deque>
 
 template<typename T>
 class MutantStack: public std::stack<T>
@@ -44,6 +42,4 @@ class MutantStack: public std::stack<T>
 		reverse_iterator rend() { return this->c.rend(); };
 		const_reverse_iterator rbegin() const { return this->c.rbegin(); };
 		const_reverse_iterator rend() const { return this->c.rend(); };
-
-
 };
